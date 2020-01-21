@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your category :"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineV1"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+    android:id="@+id/card_school_top"
+    android:layout_width="90dp"
+    android:layout_height="56dp"
+    android:layout_marginLeft="16dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#FF00CCBB"
+    app:layout_constraintBottom_toTopOf="@id/card_school"
+    app:layout_constraintStart_toStartOf="@id/card_school"
+    app:layout_constraintTop_toTopOf="@id/card_school" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_school"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="52dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toTopOf="@id/guidelineH1"
+        app:layout_constraintBottom_toTopOf="@+id/card_graduate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/card_bg1"
+            android:gravity="bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_graduate_top"
+        android:layout_width="90dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#FA397A"
+        app:layout_constraintBottom_toTopOf="@id/card_graduate"
+        app:layout_constraintStart_toStartOf="@id/card_graduate"
+        app:layout_constraintTop_toTopOf="@id/card_graduate" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_graduate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="52dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toBottomOf="@+id/card_school"
+        app:layout_constraintBottom_toTopOf="@+id/card_dropout"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:background="@drawable/card_bg2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graduate"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dropout_top"
+        android:layout_width="90dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#45B5FF"
+        app:layout_constraintBottom_toTopOf="@id/card_dropout"
+        app:layout_constraintStart_toStartOf="@id/card_dropout"
+        app:layout_constraintTop_toTopOf="@id/card_dropout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dropout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineV1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineV2"
+        app:layout_constraintTop_toBottomOf="@+id/card_graduate"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineH2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:background="@drawable/card_bg3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dropout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="4dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="28dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="28dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

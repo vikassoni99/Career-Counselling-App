@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Hey, Vikas</string>
+
+
+    <string name="q1">Question 1</string>
+    <string name="q2">Question 2</string>
+    <string name="q3">Question 3</string>
+    <string name="q4">Question 4</string>
+    <string name="question1">Which one is the first fully supported 64-bit OS ?</string>
+    <string name="question2">Which of the option cannot be used as a folder name ?</string>
+    <string name="question3">Are You a robot ? If no slide in the range of 50%-70%.</string>
+    <string name="question4">Tell us your good name ?</string>
+    <string name="button_next">Next</string>
+    <string name="hintName">Enter your name...</string>
+    <string name="q1o1">Windows XP</string>
+    <string name="q1o2">Linux</string>
+    <string name="q1o3">Mac</string>
+    <string name="q1o4">Windows Vista</string>
+    <string name="button_submit">Submit</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="correct">Correct</string>
+    <string name="empty_text">--</string>
+    <string name="q2o1">mac</string>
+    <string name="q2o2">can</string>
+    <string name="q2o3">con</string>
+    <string name="q2o4">mak</string>
+    <string name="points">Points</string>
+    <string name="score_heading">SCORE</string>
+
+</resources>

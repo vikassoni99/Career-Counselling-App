@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_quesNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/q1"
+        android:textSize="@dimen/dim_ques_num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/question1"
+        android:textSize="@dimen/dim_question"
+        app:layout_constraintBottom_toTopOf="@+id/guideBelowQ"
+        app:layout_constraintEnd_toEndOf="@+id/guideV2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideV"
+        app:layout_constraintTop_toBottomOf="@+id/txt_quesNum"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <Button
+        android:id="@+id/btn_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_option"
+        android:text="Yes"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/dim_bt_txt"
+        app:layout_constraintBottom_toTopOf="@+id/btn_no"
+        app:layout_constraintStart_toStartOf="@id/guideV"
+        app:layout_constraintTop_toBottomOf="@+id/guideBelowQ" />
+
+    <Button
+        android:id="@+id/btn_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_option"
+        android:text="No"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/dim_bt_txt"
+        app:layout_constraintBottom_toTopOf="@+id/btn_maybe"
+        app:layout_constraintStart_toStartOf="@id/guideV"
+        app:layout_constraintTop_toBottomOf="@+id/btn_yes" />
+
+    <Button
+        android:id="@+id/btn_maybe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_option"
+        android:text="Maybe"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/dim_bt_txt"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineH2"
+        app:layout_constraintStart_toStartOf="@id/guideV"
+        app:layout_constraintTop_toBottomOf="@+id/btn_no" />
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="@string/button_next"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/dim_bt_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideV2"
+        app:layout_constraintStart_toStartOf="@+id/guideV"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideBelowQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"></androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
