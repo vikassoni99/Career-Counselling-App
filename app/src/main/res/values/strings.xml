@@ -1,15 +1,18 @@
 <resources>
-    <string name="app_name">Hey, Vikas</string>
+    <string name="app_name">CACO</string>
 
 
-    <string name="q1">Question 1</string>
-    <string name="q2">Question 2</string>
-    <string name="q3">Question 3</string>
-    <string name="q4">Question 4</string>
-    <string name="question1">Which one is the first fully supported 64-bit OS ?</string>
-    <string name="question2">Which of the option cannot be used as a folder name ?</string>
-    <string name="question3">Are You a robot ? If no slide in the range of 50%-70%.</string>
-    <string name="question4">Tell us your good name ?</string>
+
+<!--    <string-array name="quesStrings">-->
+<!--        <item>Do you find it boring to learn chemical formulas and physics theory?</item>-->
+<!--        <item>If ever given an option would you choose given work to make a living to work on computers and write programs and logical codes ?</item>-->
+<!--        <item>Do you enjoy reading technical materials and solve technical problems ?</item>-->
+<!--        <item>If ever given an option would you choose given work to make a living designing equipments ?</item>-->
+<!--        <item>If ever given an option would you choose given work to make a living analyze crop yield produced from different soil and fertilizers ?</item>-->
+<!--    </string-array>-->
+
+
+
     <string name="button_next">Next</string>
     <string name="hintName">Enter your name...</string>
     <string name="q1o1">Windows XP</string>
@@ -26,5 +29,4 @@
     <string name="q2o4">mak</string>
     <string name="points">Points</string>
     <string name="score_heading">SCORE</string>
-
 </resources>

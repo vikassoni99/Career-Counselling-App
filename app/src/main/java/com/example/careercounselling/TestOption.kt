@@ -13,7 +13,7 @@ class TestOption:AppCompatActivity() {
 
         btn_manualTest.setOnClickListener(View.OnClickListener {
 
-            var intent:Intent= Intent(this@TestOption,ManualTest::class.java)
+            var intent:Intent= Intent(this@TestOption,EnterName::class.java)
             startActivity(intent)
 
         })

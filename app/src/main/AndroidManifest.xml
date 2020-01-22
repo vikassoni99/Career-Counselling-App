@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".TestOption"></activity>
         <activity android:name=".ManualTest"></activity>
+        <activity android:name=".Scorecard"></activity>
+        <activity android:name=".EnterName"></activity>
     </application>
 
 </manifest>
