@@ -1,8 +1,11 @@
 package com.example.careercounselling
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.layout_scorecard.*
@@ -58,6 +61,13 @@ class Scorecard:AppCompatActivity() {
         per_science.setText(perS)
         per_bio.setText(perB)
         per_commerce.setText(perC)
+
+        //link to science web
+        btn_link_science.setOnClickListener(View.OnClickListener {
+            var intentScWeb:Intent=Intent(Intent.ACTION_VIEW, Uri.parse("https://www.coursesafter10th.com/science/science-stream-after-10th/"))
+            startActivity(intentScWeb)
+        })
+
 
     }
 }

@@ -1,6 +1,7 @@
 package com.example.careercounselling
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,10 @@ class TestOption:AppCompatActivity() {
 
         })
 
-
+        btn_chatbot.setOnClickListener(View.OnClickListener {
+            var intentWeb:Intent=Intent(Intent.ACTION_VIEW, Uri.parse("https://chatbot.hellotars.com/conv/NyZ3bV/"))
+            startActivity(intentWeb)
+        })
 
 
     }
