@@ -1,6 +1,8 @@
 package com.example.careercounselling
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
@@ -61,9 +63,12 @@ class ManualTest:AppCompatActivity() {
         txt_quesNum.setText(qnum)
         //Next Question
         btn_next.setOnClickListener(View.OnClickListener {
+            btn_yes.setBackgroundResource(R.drawable.btn_bg_white)
+            btn_no.setBackgroundResource(R.drawable.btn_bg_white)
+            btn_maybe.setBackgroundResource(R.drawable.btn_bg_white)
 
             if(count==20){
-                Toast.makeText(this,"S : $scoreScience  B : $scoreBio C : $scoreCommerce ",Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this,"S : $scoreScience  B : $scoreBio C : $scoreCommerce ",Toast.LENGTH_SHORT).show()
                 intentx=Intent(this@ManualTest,Scorecard::class.java)
                 perS=(scoreScience/10)*100
                 perB=(scoreBio/5)*100
@@ -72,6 +77,10 @@ class ManualTest:AppCompatActivity() {
                 str_perS=perS.toString()+"%"
                 str_perB=perB.toString()+"%"
                 str_perC=perC.toString()+"%"
+
+                intentx.putExtra("scoreS",perS.toString())
+                intentx.putExtra("scoreB",perS.toString())
+                intentx.putExtra("scoreC",perC.toString())
 
                 intentx.putExtra("perS",str_perS)
                 intentx.putExtra("perB",str_perB)
@@ -89,6 +98,7 @@ class ManualTest:AppCompatActivity() {
 
         //Count yes
         btn_yes.setOnClickListener(View.OnClickListener {
+            btn_yes.setBackgroundResource(R.drawable.btn_bg_click)
             when(count){
                 in 1..10 ->scoreScience+=1
                 in 11..15 ->scoreBio+=1
@@ -97,6 +107,7 @@ class ManualTest:AppCompatActivity() {
         })
         //Count maybe
         btn_maybe.setOnClickListener(View.OnClickListener {
+            btn_maybe.setBackgroundResource(R.drawable.btn_bg_click)
             when(count){
                 in 1..10 ->scoreScience+=0.5
                 in 11..15 ->scoreBio+=0.5
@@ -106,6 +117,7 @@ class ManualTest:AppCompatActivity() {
         })
 
         btn_no.setOnClickListener(View.OnClickListener {
+            btn_no.setBackgroundResource(R.drawable.btn_bg_click)
             when(count){
                 in 1..10 ->scoreScience+=0.0
                 in 11..15 ->scoreBio+=0.0
@@ -123,6 +135,16 @@ class ManualTest:AppCompatActivity() {
             str_perS=perS.toString()+"%"
             str_perB=perB.toString()+"%"
             str_perC=perC.toString()+"%"
+
+            var editor:SharedPreferences.Editor=getSharedPreferences("My_pref", Context.MODE_PRIVATE).edit()
+            editor.putString("scoreS",perS.toString())
+            editor.apply()
+
+
+//
+//            intentx.putExtra("scoreS",perS.toString())
+//            intentx.putExtra("scoreB",perB.toString())
+//            intentx.putExtra("scoreC",perC.toString())
 
             intentx.putExtra("perS",str_perS)
             intentx.putExtra("perB",str_perB)

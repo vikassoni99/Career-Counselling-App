@@ -36,8 +36,8 @@
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:text="Vikas Soni"
+                android:layout_marginLeft="16dp"
+                android:text="------"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/dp"
@@ -98,18 +98,75 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Your Score"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <View
+                android:id="@+id/line_1"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/line_bg"
                 app:layout_constraintTop_toBottomOf="@id/str_yourScore" />
 
+            <ImageView
+                android:id="@+id/emojiScience"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toStartOf="@+id/emojiBio"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Science"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/emojiScience"
+                app:layout_constraintEnd_toEndOf="@id/emojiScience"
+                app:layout_constraintTop_toBottomOf="@id/emojiScience"/>
+
+            <ImageView
+                android:id="@+id/emojiBio"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toStartOf="@+id/emojiCommerce"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/emojiScience"
+                app:layout_constraintTop_toBottomOf="@id/line_1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/emojiBio"
+                app:layout_constraintEnd_toEndOf="@id/emojiBio"
+                app:layout_constraintTop_toBottomOf="@id/emojiBio"/>
+
+            <ImageView
+                android:id="@+id/emojiCommerce"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/emojiBio"
+                app:layout_constraintTop_toBottomOf="@id/line_1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Commerce"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/emojiCommerce"
+                app:layout_constraintEnd_toEndOf="@id/emojiCommerce"
+                app:layout_constraintTop_toBottomOf="@id/emojiCommerce"/>
+
             <View
+                android:id="@+id/line_2"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginBottom="8dp"
@@ -122,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="70%"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@id/str_science"
                 app:layout_constraintEnd_toStartOf="@+id/per_bio"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -135,7 +192,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="20dp"
                 android:text="5%"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@id/str_bio"
                 app:layout_constraintEnd_toStartOf="@+id/per_commerce"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -147,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="10%"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@id/str_commerce"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

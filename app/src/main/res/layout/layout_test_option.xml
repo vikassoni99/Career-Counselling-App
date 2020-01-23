@@ -1,51 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/txt_testType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select test type :"
-        android:textSize="28dp"
+        android:text="Take me to"
+        android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_select_option"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
-        android:id="@+id/btn_manualTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_bg"
-        app:layout_constraintTop_toTopOf="@id/txt_testType"
-        app:layout_constraintBottom_toTopOf="@id/btn_chatbot"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="NORMAL"/>
-
-    <View
-        android:id="@+id/view_line"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_select_option"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@drawable/line_bg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_manualTest"
-        app:layout_constraintBottom_toTopOf="@id/btn_chatbot"/>
+        android:layout_height="0dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toTopOf="@id/guidelineH11"
+        app:layout_constraintBottom_toTopOf="@id/guidelineH22"
+        >
 
-    <Button
-        android:id="@+id/btn_chatbot"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <View
+                android:id="@+id/line_optionSelect"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/line_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <Button
+                android:id="@+id/btn_manualTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QUIZ"
+                android:background="@drawable/btn_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/line_optionSelect"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <Button
+                android:id="@+id/btn_chatbot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHATBOT"
+                android:background="@drawable/btn_bg"
+                app:layout_constraintTop_toTopOf="@id/line_optionSelect"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_bg"
-        app:layout_constraintTop_toBottomOf="@id/btn_manualTest"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="CHATBOT"/>
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
